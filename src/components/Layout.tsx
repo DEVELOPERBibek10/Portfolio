@@ -1,8 +1,7 @@
-import { Outlet } from "react-router-dom";
 import Navbar from "./shared/Navbar";
 import { useIntersectionObserver } from "../Hooks/useIntersectionObserver";
 
-const Layout = () => {
+const Layout = ({ children }: { children: React.ReactNode }) => {
   const { sentinelRef, isScrolled } = useIntersectionObserver();
   return (
     <>
@@ -16,9 +15,7 @@ const Layout = () => {
           <Navbar isScrolled={isScrolled} />
         </header>
 
-        <main className="flex-1 pt-20">
-          <Outlet />
-        </main>
+        <main className="flex-1 pt-20">{children}</main>
       </div>
     </>
   );
