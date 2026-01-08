@@ -16,8 +16,8 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
       } justify-between items-center`}
     >
       <a href="#home" className="mx-10 flex items-center gap-1">
-        <Code2 size={30} color="red" />
         <span className="text-2xl font-black">Bibek</span>
+        <Code2 size={30} color="red" />
       </a>
 
       <ul
