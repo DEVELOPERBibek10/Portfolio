@@ -1,8 +1,14 @@
 import Navbar from "./shared/Navbar";
-import { useIntersectionObserver } from "../Hooks/useIntersectionObserver";
+import { useScrollTracker } from "../Hooks/useScrollTracker";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
-  const { sentinelRef, isScrolled } = useIntersectionObserver();
+interface LayoutProps {
+  children: React.ReactNode;
+  activeId: string;
+}
+
+const Layout = ({ children, activeId }: LayoutProps) => {
+  const { sentinelRef, isScrolled } = useScrollTracker(0);
+
   return (
     <>
       <div className="flex min-h-screen relative flex-col ">
@@ -12,7 +18,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         />
 
         <header className="fixed top-0 w-full z-50">
-          <Navbar isScrolled={isScrolled} />
+          <Navbar activeId={activeId} isScrolled={isScrolled} />
         </header>
 
         <main className="flex-1 pt-20">{children}</main>

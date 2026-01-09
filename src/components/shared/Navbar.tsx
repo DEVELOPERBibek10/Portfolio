@@ -5,12 +5,14 @@ import { CircleArrowUp, Code2, Moon } from "lucide-react";
 
 interface NavbarProps {
   isScrolled: boolean;
+  activeId: string;
 }
 
-const Navbar = ({ isScrolled }: NavbarProps) => {
+const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
+  console.log(activeId);
   return (
     <nav
-      className={`h-14 w-full flex ${
+      className={`h-18 w-full flex ${
         isScrolled &&
         "bg-white/10 backdrop-blur-lg border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
       } justify-between items-center`}
@@ -23,11 +25,14 @@ const Navbar = ({ isScrolled }: NavbarProps) => {
       <ul
         className={`w-fit ${
           !isScrolled &&
-          "bg-white/10 backdrop-blur-lg border-b h-14 px-6 mt-5 rounded-full border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.07)]"
-        } flex ml-14 items-center justify-center gap-4`}
+          "bg-white/10 backdrop-blur-lg border-b h-14 px-6 mt-3 rounded-full border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.07)]"
+        } flex ml-32 items-center justify-center gap-4`}
       >
         {navLinks.map((link) => (
-          <li className="text-base">
+          <li
+            key={link.path}
+            className={`${activeId === link.path ? "font-bold" : "font-light"}`}
+          >
             <a href={`#${link.path}`}>{link.label}</a>
           </li>
         ))}
