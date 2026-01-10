@@ -1,6 +1,14 @@
-import { fadeInLeft, fadeInUp } from "@/constants/motionVarients";
+import {
+  fadeInLeft,
+  fadeInUp,
+  LinkContainerVariants,
+  LinkItemVariants,
+} from "@/constants/motionVarients";
 import { Award, GraduationCap } from "lucide-react";
 import { motion } from "motion/react";
+import { FaGitAlt } from "react-icons/fa6";
+import { VscVscode } from "react-icons/vsc";
+import { SiAppwrite, SiPostman } from "react-icons/si";
 
 const About = () => {
   return (
@@ -13,13 +21,13 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             variants={fadeInUp}
             transition={{ duration: 0.5 }}
-            className="text-center "
+            className="text-center pb-6"
           >
             <p className="text-xs opacity-50 font-medium">Get To Know More</p>
             <h2 className="text-3xl font-bold">About Me</h2>
           </motion.div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-18">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
           {/* About Image */}
           <motion.div
             initial="hidden"
@@ -92,6 +100,60 @@ const About = () => {
               Eligendi illum libero dolorum cum laboriosam corrupt quibem, sed
               leeste eso misgraeort! Nulla, niquod a quel
             </motion.p>
+            <div className="flex flex-col justify-center gap-3 mt-6">
+              <div>
+                <motion.p
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.3 }}
+                  variants={fadeInLeft}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="font-medium text-lg"
+                >
+                  Tools I use
+                </motion.p>
+                <motion.hr
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.3 }}
+                  variants={fadeInLeft}
+                  transition={{ duration: 0.6 }}
+                  className="bg-gray-300 h-1 w-24"
+                ></motion.hr>
+              </div>
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.3 }}
+                variants={LinkContainerVariants}
+                className="flex items-center gap-2"
+              >
+                <motion.div
+                  variants={LinkItemVariants}
+                  className="w-12 h-12 border-border border-2 flex items-center justify-center rounded-lg"
+                >
+                  <VscVscode className="size-3/4" />
+                </motion.div>
+                <motion.div
+                  variants={LinkItemVariants}
+                  className="w-12 h-12 border-border border-2 flex items-center justify-center rounded-lg"
+                >
+                  <FaGitAlt className="size-3/4" />
+                </motion.div>
+                <motion.div
+                  variants={LinkItemVariants}
+                  className="w-12 h-12 border-border border-2 flex items-center justify-center rounded-lg"
+                >
+                  <SiAppwrite className="size-3/4" />
+                </motion.div>
+                <motion.div
+                  variants={LinkItemVariants}
+                  className="w-12 h-12 border-border border-2 flex items-center justify-center rounded-lg"
+                >
+                  <SiPostman className="size-3/4" />
+                </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>

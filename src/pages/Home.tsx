@@ -1,5 +1,11 @@
-import { fadeBottom, scaleIn } from "@/constants/motionVarients";
+import {
+  fadeBottom,
+  LinkContainerVariants,
+  LinkItemVariants,
+  scaleIn,
+} from "@/constants/motionVarients";
 import { ArrowRight, Download } from "lucide-react";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { motion } from "motion/react";
 
 const Home = () => {
@@ -12,7 +18,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={scaleIn}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
             className=""
           >
             <div className="w-52 h-52 mb-4 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-gray-400 shadow-[0_4px_30px_rgba(0,0,0,0.06)]">
@@ -40,7 +46,7 @@ const Home = () => {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
             variants={fadeBottom}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.65, ease: "easeOut" }}
             className="flex flex-col justify-center gap-6"
           >
             <h2 className="text-2xl md:text-3xl font-semibold text-center">
@@ -63,6 +69,29 @@ const Home = () => {
                 <Download className="size-4 md:size-6" />
               </a>
             </div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={LinkContainerVariants}
+              className="flex justify-center gap-6"
+            >
+              <motion.a
+                variants={LinkItemVariants}
+                href="https://www.linkedin.com/in/bibek-pyakurel-661488314/"
+                target="_blank"
+                className="hover:opacity-50 hover:-translate-y-2 transition-all duration-400"
+              >
+                <FaLinkedin size={24} />
+              </motion.a>
+              <motion.a
+                variants={LinkItemVariants}
+                href="https://github.com/DEVELOPERBibek10"
+                target="_blank"
+                className="hover:opacity-50 hover:-translate-y-2 transition-all duration-400"
+              >
+                <FaGithubSquare size={24} />
+              </motion.a>
+            </motion.div>
           </motion.div>
         </div>
       </div>
