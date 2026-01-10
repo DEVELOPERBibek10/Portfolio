@@ -28,18 +28,21 @@ export const LinkContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      // This is the engine of the stagger
       staggerChildren: 0.1,
-      // Optional: ensures the parent finishes its own animation before children start
       delayChildren: 0.3,
     },
   },
 };
 
 export const LinkItemVariants = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { y: 10, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
   },
+};
+
+export const fadeInUpLarge = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
 };

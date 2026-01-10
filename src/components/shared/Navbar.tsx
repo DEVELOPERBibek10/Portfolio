@@ -15,7 +15,6 @@ interface NavbarProps {
 }
 
 const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
-  console.log(activeId);
   return (
     <nav
       className={`h-18 w-full flex ${

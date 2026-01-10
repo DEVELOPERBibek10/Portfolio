@@ -71,7 +71,7 @@ const Home = () => {
             </div>
             <motion.div
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
               variants={LinkContainerVariants}
               className="flex justify-center gap-6"
             >
@@ -79,7 +79,7 @@ const Home = () => {
                 variants={LinkItemVariants}
                 href="https://www.linkedin.com/in/bibek-pyakurel-661488314/"
                 target="_blank"
-                className="hover:opacity-50 hover:-translate-y-2 transition-all duration-400"
+                className="hover:opacity-50 hover:-translate-y-1 transition-all duration-400"
               >
                 <FaLinkedin size={24} />
               </motion.a>
@@ -87,7 +87,7 @@ const Home = () => {
                 variants={LinkItemVariants}
                 href="https://github.com/DEVELOPERBibek10"
                 target="_blank"
-                className="hover:opacity-50 hover:-translate-y-2 transition-all duration-400"
+                className="hover:opacity-50 hover:-translate-y-1 transition-all duration-400"
               >
                 <FaGithubSquare size={24} />
               </motion.a>

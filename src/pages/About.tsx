@@ -27,7 +27,7 @@ const About = () => {
             <h2 className="text-3xl font-bold">About Me</h2>
           </motion.div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
           {/* About Image */}
           <motion.div
             initial="hidden"
@@ -35,7 +35,7 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             variants={fadeInLeft}
             transition={{ duration: 0.6 }}
-            className="w-full lg:w-100"
+            className="w-full lg:w-100 pb-3"
           >
             <div className="rounded-2xl overflow-hidden shadow-[0px_1px_1px_rgba(0,0,0,0.05),0px_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0px_2px_3px_rgba(0,0,0,0.04)]">
               <img
@@ -63,7 +63,7 @@ const About = () => {
                 <h3 className="font-semibold text-foreground mb-1">
                   Experience
                 </h3>
-                <p className="text-muted-foreground text-sm">3+ years</p>
+                <p className="text-muted-foreground text-sm">1+ year</p>
                 <p className="text-muted-foreground text-sm">
                   Frontend Development
                 </p>
@@ -76,10 +76,7 @@ const About = () => {
                   Education
                 </h3>
                 <p className="text-muted-foreground text-sm">
-                  B.Sc. Bachelors Degree
-                </p>
-                <p className="text-muted-foreground text-sm">
-                  M.Sc. Masters Degree
+                  BIT Bachelors Degree
                 </p>
               </div>
             </motion.div>
@@ -107,7 +104,7 @@ const About = () => {
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.3 }}
                   variants={fadeInLeft}
-                  transition={{ duration: 0.6, delay: 0.3 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
                   className="font-medium text-lg"
                 >
                   Tools I use
@@ -124,7 +121,7 @@ const About = () => {
               <motion.div
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.2 }}
                 variants={LinkContainerVariants}
                 className="flex items-center gap-2"
               >
@@ -157,7 +154,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      ;
     </>
   );
 };
