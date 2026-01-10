@@ -21,7 +21,7 @@ const Layout = ({ children, activeId }: LayoutProps) => {
           <Navbar activeId={activeId} isScrolled={isScrolled} />
         </header>
 
-        <main className="flex-1 pt-20">{children}</main>
+        <main className="flex-1">{children}</main>
       </div>
     </>
   );

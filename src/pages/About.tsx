@@ -1,63 +1,56 @@
+import { fadeInLeft, fadeInUp } from "@/constants/motionVarients";
 import { Award, GraduationCap } from "lucide-react";
 import { motion } from "motion/react";
-const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
 
-const fadeInLeft = {
-  hidden: { opacity: 0, x: -30 },
-  visible: { opacity: 1, x: 0 },
-};
 const About = () => {
   return (
     <>
-      <section id="about" className="px-20 h-screen">
+      <section id="about" className="px-20 h-screen pt-24">
         <div className="container mx-auto">
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, margin: "-100px", amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={fadeInUp}
             transition={{ duration: 0.5 }}
-            className="text-center mb-16"
+            className="text-center "
           >
             <p className="text-xs opacity-50 font-medium">Get To Know More</p>
             <h2 className="text-3xl font-bold">About Me</h2>
           </motion.div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-18">
           {/* About Image */}
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, margin: "-100px", amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
             variants={fadeInLeft}
             transition={{ duration: 0.6 }}
-            className="w-full lg:w-1/3"
+            className="w-full lg:w-100"
           >
             <div className="rounded-2xl overflow-hidden shadow-[0px_1px_1px_rgba(0,0,0,0.05),0px_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0px_2px_3px_rgba(0,0,0,0.04)]">
               <img
                 src={"/profile.jpeg"}
                 alt="About John Doe"
-                className="w-full h-80 object-cover"
+                className="w-full h-100 object-cover object-center"
               />
             </div>
           </motion.div>
 
           {/* About Content */}
-          <div className="w-full lg:w-2/3">
+          <div className="w-full lg:w-2/3 mb-6">
             {/* Info Cards */}
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, margin: "-100px", amount: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
               variants={fadeInUp}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8"
             >
               {/* Experience Card */}
-              <div className="bg-card rounded-2xl p-6 text-center shadow-card border border-border hover:shadow-[0px_1px_1px_rgba(0,0,0,0.05),0px_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0px_2px_3px_rgba(0,0,0,0.04)] transition-shadow duration-300">
+              <div className="bg-card rounded-2xl p-6 text-center border border-border hover:shadow-[0px_1px_1px_rgba(0,0,0,0.05),0px_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0px_2px_3px_rgba(0,0,0,0.04)] transition-shadow duration-300">
                 <Award className="w-8 h-8 mx-auto mb-3 text-foreground" />
                 <h3 className="font-semibold text-foreground mb-1">
                   Experience
@@ -69,7 +62,7 @@ const About = () => {
               </div>
 
               {/* Education Card */}
-              <div className="bg-card rounded-2xl p-6 text-center shadow-card border border-border hover:shadow-card-hover transition-shadow duration-300">
+              <div className="bg-card rounded-2xl p-6 text-center border border-border hover:shadow-[0px_1px_1px_rgba(0,0,0,0.05),0px_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0px_2px_3px_rgba(0,0,0,0.04)] transition-shadow duration-300">
                 <GraduationCap className="w-8 h-8 mx-auto mb-3 text-foreground" />
                 <h3 className="font-semibold text-foreground mb-1">
                   Education
@@ -87,7 +80,7 @@ const About = () => {
             <motion.p
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, margin: "-100px", amount: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
               variants={fadeInUp}
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-muted-foreground leading-relaxed"

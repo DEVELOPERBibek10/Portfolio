@@ -1,19 +1,10 @@
+import { fadeBottom, scaleIn } from "@/constants/motionVarients";
 import { ArrowRight, Download } from "lucide-react";
 import { motion } from "motion/react";
 
-const scaleIn = {
-  hidden: { scale: 0.8, opacity: 0 },
-  visible: { scale: 1, opacity: 1 },
-};
-
-const fadeBottom = {
-  hidden: { y: -30, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
-
 const Home = () => {
   return (
-    <div id="home" className="flex items-center justify-center h-screen">
+    <div id="home" className="flex items-center justify-center h-screen pt-24">
       <div className="container mx-auto">
         <div className="flex flex-col items-center justify-center gap-4">
           <motion.div
@@ -28,12 +19,19 @@ const Home = () => {
               <img
                 src={"/profile.jpeg"}
                 alt="Bibek Pyakurel"
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </div>
             <p className="text-base md:text-lg w-full pl-6 font-medium text-center flex items-center gap-2">
               Hi! I am Bibek Pyakurel
-              <img src={"/hand-icon.png"} width={20} height={20} alt="" />
+              <img
+                loading="lazy"
+                src={"/hand-icon.png"}
+                width={20}
+                height={20}
+                alt=""
+              />
             </p>
           </motion.div>
 

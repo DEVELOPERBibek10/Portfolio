@@ -1,7 +1,13 @@
 import { navLinks } from "../../constants/navLinks";
 
+import { motion } from "motion/react";
 import { Button } from "../ui/button";
 import { CircleArrowUp, Code2, Moon } from "lucide-react";
+import {
+  fadeBottom,
+  fadeInLeft,
+  fadeInRight,
+} from "@/constants/motionVarients";
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -17,16 +23,29 @@ const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
         "bg-white/10 backdrop-blur-lg border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.06)]"
       } justify-between items-center`}
     >
-      <a href="#home" className="mx-10 flex items-center gap-1">
+      <motion.a
+        href="#home"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInLeft}
+        transition={{ duration: 0.6 }}
+        className="mx-10 flex items-center gap-1"
+      >
         <span className="text-2xl font-black">Bibek</span>
         <Code2 size={30} color="red" />
-      </a>
+      </motion.a>
 
-      <ul
+      <motion.ul
         className={`w-fit ${
           !isScrolled &&
           "bg-white/10 backdrop-blur-lg border-b h-14 px-6 mt-3 rounded-full border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.07)]"
         } flex ml-32 items-center justify-center gap-4`}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeBottom}
+        transition={{ duration: 0.6 }}
       >
         {navLinks.map((link) => (
           <li
@@ -36,9 +55,16 @@ const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
             <a href={`#${link.path}`}>{link.label}</a>
           </li>
         ))}
-      </ul>
+      </motion.ul>
 
-      <div className="flex gap-3 items-center justify-end mx-20">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeInRight}
+        transition={{ duration: 0.6 }}
+        className="flex gap-3 items-center justify-end mx-20"
+      >
         <Button variant={"ghost"} size={"icon"} className="cursor-pointer">
           <Moon size={18} />
         </Button>
@@ -51,7 +77,7 @@ const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
           Contact me
           <CircleArrowUp size={18} />
         </a>
-      </div>
+      </motion.div>
     </nav>
   );
 };
