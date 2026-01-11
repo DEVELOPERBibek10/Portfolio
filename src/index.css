@@ -125,4 +125,21 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .asthetic-shadow {
+    @apply shadow-[0px_1px_1px_rgba(0,0,0,0.05),0px_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0px_2px_3px_rgba(0,0,0,0.04)];
+  }
+}
+.project-swiper .swiper-button-next,
+.project-swiper .swiper-button-prev {
+  display: none;
+}
+
+.project-swiper .swiper-pagination-bullet-active {
+  background-color: black;
+  opacity: 1;
+}
+
+section[id] {
+  scroll-margin-top: 5rem; /* Adjust based on your Navbar height */
 }

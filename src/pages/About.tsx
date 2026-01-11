@@ -13,7 +13,7 @@ import { SiAppwrite, SiPostman } from "react-icons/si";
 const About = () => {
   return (
     <>
-      <section id="about" className="px-20 h-screen pt-24">
+      <section id="about" className="px-20 pt-6 md:mt-12">
         <div className="container mx-auto">
           <motion.div
             initial="hidden"

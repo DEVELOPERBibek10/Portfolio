@@ -9,7 +9,7 @@ import { motion } from "motion/react";
 const ExpericenceCard = ({ Skills }: { Skills: SkillCategory[] }) => {
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {Skills.map((category, categoryIndex) => (
           <motion.div
             key={category.title}

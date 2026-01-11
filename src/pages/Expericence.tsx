@@ -3,12 +3,12 @@ import { SkillCategories } from "../constants/Skills";
 import { motion } from "motion/react";
 const Expericence = () => {
   return (
-    <section id="experience" className=" bg-secondary/30 pt-24 px-6 h-[70vh]">
+    <section id="experience" className=" bg-secondary/30 py-24 mt-24 px-4">
       <div className="container mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, margin: "-100px", amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           variants={{
             hidden: { opacity: 0, y: 20 },
             visible: { opacity: 1, y: 0 },
