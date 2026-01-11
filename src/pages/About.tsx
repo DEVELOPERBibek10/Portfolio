@@ -104,7 +104,7 @@ const About = () => {
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.3 }}
                   variants={fadeInLeft}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
                   className="font-medium text-lg"
                 >
                   Tools I use
@@ -114,7 +114,7 @@ const About = () => {
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.3 }}
                   variants={fadeInLeft}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.5 }}
                   className="bg-gray-300 h-1 w-24"
                 ></motion.hr>
               </div>
