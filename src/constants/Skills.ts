@@ -1,4 +1,4 @@
-import type { SkillCategory } from "@/types/SkillType";
+import type { SkillCategory } from "@/types/SkillTypes";
 import { BiLogoPostgresql } from "react-icons/bi";
 import {
   IoLogoHtml5,

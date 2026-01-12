@@ -3,7 +3,7 @@ import {
   LinkContainerVariants,
   LinkItemVariants,
 } from "../../constants/motionVarients";
-import type { SkillCategory } from "../../types/SkillType";
+import type { SkillCategory } from "../../types/SkillTypes";
 import { motion } from "motion/react";
 
 const ExpericenceCard = ({ Skills }: { Skills: SkillCategory[] }) => {

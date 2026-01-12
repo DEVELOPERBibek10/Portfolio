@@ -1,4 +1,4 @@
-import { Swiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
@@ -15,6 +15,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ProjectCardInfo } from "@/constants/Projects";
+import ProjectCard from "@/components/shared/ProjectCard";
 
 const Projects = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
@@ -36,10 +38,10 @@ const Projects = () => {
             <p className="text-xs opacity-50 font-medium">Browse My Recent</p>
             <h2 className="text-3xl font-bold">Projects</h2>
           </motion.div>
-          <motion.div className="project-swiper flex justify-between items-center mx-auto max-w-[80%] mt-5">
+          <motion.div className="project-swiper flex justify-between items-center mx-auto  max-w-[82%] mt-5">
             <Button
               className={cn(
-                "w-14 h-14 cursor-pointer rounded-full asthetic-shadow bg-white hover:bg-white text-black"
+                "w-14 h-14 cursor-pointer rounded-full asthetic-shadow bg-white hover:bg-white text-black mr-3"
               )}
               onClick={() => swiper?.slidePrev()}
             >
@@ -48,17 +50,44 @@ const Projects = () => {
             <Swiper
               cssMode={true}
               navigation={true}
-              pagination={{ clickable: true }}
-              slidesPerView={3}
+              pagination={{
+                clickable: true,
+                dynamicBullets: true,
+                dynamicMainBullets: 1,
+              }}
+              slidesPerView={2}
               spaceBetween={50}
               mousewheel={true}
               keyboard={true}
               onSwiper={setSwiper}
               modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-            ></Swiper>
+            >
+              {ProjectCardInfo.map(
+                ({
+                  title,
+                  image,
+                  techStack,
+                  description,
+                  githubUrl,
+                  liveUrl,
+                }) => (
+                  <SwiperSlide className="mb-12">
+                    <ProjectCard
+                      image={image}
+                      key={title}
+                      title={title}
+                      description={description}
+                      techStack={techStack}
+                      githubUrl={githubUrl}
+                      liveUrl={liveUrl}
+                    />
+                  </SwiperSlide>
+                )
+              )}
+            </Swiper>
             <Button
               className={cn(
-                "w-14 h-14 rounded-full cursor-pointer asthetic-shadow bg-white hover:bg-white text-black"
+                "w-14 h-14 ml-3 rounded-full cursor-pointer asthetic-shadow bg-white hover:bg-white text-black"
               )}
               onClick={() => swiper?.slideNext()}
             >
