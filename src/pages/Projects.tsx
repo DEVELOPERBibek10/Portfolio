@@ -28,12 +28,12 @@ const Projects = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   return (
     <>
-      <section id="projects" className=" px-6 my-32 ">
+      <section id="projects" className=" px-6 my-24 ">
         <div className="container mx-auto">
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.5 }}
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
@@ -90,7 +90,10 @@ const Projects = () => {
                   liveUrl,
                 }) => (
                   <SwiperSlide>
-                    <motion.article variants={LinkItemVariants}>
+                    <motion.article
+                      variants={LinkItemVariants}
+                      transition={{ duration: 0.5 }}
+                    >
                       <ProjectCard
                         image={image}
                         key={title}

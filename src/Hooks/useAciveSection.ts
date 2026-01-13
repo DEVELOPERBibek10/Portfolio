@@ -12,7 +12,7 @@ export function useActiveSection(sectionIds: string[]) {
         }
       },
       {
-        threshold: 0.5,
+        threshold: 0.6,
       }
     );
     sectionIds.forEach((id: string) => {
