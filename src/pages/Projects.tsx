@@ -17,6 +17,12 @@ import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { ProjectCardInfo } from "@/constants/Projects";
 import ProjectCard from "@/components/shared/ProjectCard";
+import {
+  fadeInLeft,
+  fadeInRight,
+  LinkContainerVariants,
+  LinkItemVariants,
+} from "@/constants/motionVarients";
 
 const Projects = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
@@ -38,15 +44,27 @@ const Projects = () => {
             <p className="text-xs opacity-50 font-medium">Browse My Recent</p>
             <h2 className="text-3xl font-bold">Projects</h2>
           </motion.div>
-          <motion.div className="project-swiper flex justify-between items-center mx-auto  max-w-[82%] mt-5">
-            <Button
-              className={cn(
-                "w-14 h-14 cursor-pointer rounded-full asthetic-shadow bg-white hover:bg-white text-black mr-3"
-              )}
-              onClick={() => swiper?.slidePrev()}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={LinkContainerVariants}
+            className="project-swiper flex justify-between items-center mx-auto  max-w-[82%] mt-5"
+          >
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInLeft}
+              transition={{ delay: 0.3, duration: 0.4 }}
             >
-              <ChevronLeft className="size-3/4" />
-            </Button>
+              <Button
+                className={cn(
+                  "w-14 h-14 cursor-pointer rounded-full asthetic-shadow bg-white hover:bg-white text-black mr-3"
+                )}
+                onClick={() => swiper?.slidePrev()}
+              >
+                <ChevronLeft className="size-3/4" />
+              </Button>
+            </motion.div>
             <Swiper
               cssMode={true}
               navigation={true}
@@ -71,28 +89,37 @@ const Projects = () => {
                   githubUrl,
                   liveUrl,
                 }) => (
-                  <SwiperSlide className="mb-12">
-                    <ProjectCard
-                      image={image}
-                      key={title}
-                      title={title}
-                      description={description}
-                      techStack={techStack}
-                      githubUrl={githubUrl}
-                      liveUrl={liveUrl}
-                    />
+                  <SwiperSlide>
+                    <motion.article variants={LinkItemVariants}>
+                      <ProjectCard
+                        image={image}
+                        key={title}
+                        title={title}
+                        description={description}
+                        techStack={techStack}
+                        githubUrl={githubUrl}
+                        liveUrl={liveUrl}
+                      />
+                    </motion.article>
                   </SwiperSlide>
                 )
               )}
             </Swiper>
-            <Button
-              className={cn(
-                "w-14 h-14 ml-3 rounded-full cursor-pointer asthetic-shadow bg-white hover:bg-white text-black"
-              )}
-              onClick={() => swiper?.slideNext()}
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInRight}
+              transition={{ delay: 0.3, duration: 0.4 }}
             >
-              <ChevronRight className="size-3/4" />
-            </Button>
+              <Button
+                className={cn(
+                  "w-14 h-14 ml-3 rounded-full cursor-pointer asthetic-shadow bg-white hover:bg-white text-black"
+                )}
+                onClick={() => swiper?.slideNext()}
+              >
+                <ChevronRight className="size-3/4" />
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </section>

@@ -38,10 +38,10 @@ const ProjectCard = ({
   className,
 }: ProjectCardProps) => {
   return (
-    <motion.div className="h-full">
+    <motion.div className="h-full pb-16">
       <Card
         className={cn(
-          "group overflow-hidden transition-all duration-500 h-118 hover:asthetic-shadow hover:-translate-y-1",
+          "group overflow-hidden transition-all duration-500 h-120 hover:asthetic-shadow hover:-translate-y-1",
           className
         )}
       >
@@ -52,12 +52,11 @@ const ProjectCard = ({
             alt={title}
             className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
 
         <CardHeader>
           <CardTitle className="text-xl tracking-tight">{title}</CardTitle>
-          <CardDescription className="leading-relaxed line-clamp-3">
+          <CardDescription className="leading-relaxed line-clamp-4">
             {description}
           </CardDescription>
         </CardHeader>
