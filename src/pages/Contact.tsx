@@ -1,4 +1,5 @@
 import ContactForm from "@/components/shared/ContactForm";
+import { fadeInUpLarge } from "@/constants/motionVarients";
 import { motion } from "motion/react";
 
 const Contact = () => {
@@ -14,13 +15,20 @@ const Contact = () => {
               hidden: { opacity: 0, y: 20 },
               visible: { opacity: 1, y: 0 },
             }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.4 }}
             className="text-center mb-5"
           >
             <p className="text-xs opacity-50 font-medium">Get in touch</p>
             <h2 className="text-3xl font-bold">Contact Me</h2>
           </motion.div>
-          <ContactForm />
+          <motion.div
+            initial={"hidden"}
+            whileInView={"visible"}
+            variants={fadeInUpLarge}
+            transition={{ duration: 0.55, delay: 0.15 }}
+          >
+            <ContactForm />
+          </motion.div>
         </div>
       </section>
     </>

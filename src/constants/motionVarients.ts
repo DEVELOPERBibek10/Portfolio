@@ -43,6 +43,6 @@ export const LinkItemVariants = {
 };
 
 export const fadeInUpLarge = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 55 },
   visible: { opacity: 1, y: 0 },
 };
