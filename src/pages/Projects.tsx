@@ -55,8 +55,8 @@ const Projects = () => {
                 dynamicBullets: true,
                 dynamicMainBullets: 1,
               }}
-              slidesPerView={2}
-              spaceBetween={50}
+              slidesPerView={3}
+              spaceBetween={20}
               mousewheel={true}
               keyboard={true}
               onSwiper={setSwiper}
