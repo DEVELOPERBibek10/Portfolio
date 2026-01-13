@@ -12,7 +12,7 @@ export const ProjectCardInfo = [
     image: "/vidtube.png",
     title: "Vidtube (only auth)",
     description:
-      "A comprehensive analytics platform built for modern businesses. Track metrics, visualize data trends, and make data-driven decisions with real-time insights.",
+      "A high-performance video platform with JWT authentication, silent token refresh via Axios interceptors, and React-Query for server-state management and session persistence.",
     techStack: [
       "Mongo DB",
       "Express",
@@ -28,7 +28,7 @@ export const ProjectCardInfo = [
     image: "/pro-kanban.png",
     title: "Pro Kanban",
     description:
-      "A comprehensive analytics platform built for modern businesses. Track metrics, visualize data trends, and make data-driven decisions with real-time insights.",
+      "Kanban board with custom drag-and-drop (no libraries), global project/task search, form validation via React-Hook-Form, and Redux Toolkit for state management.",
     techStack: ["React JS", "Redux", "Shadcn UI", "Motion"],
     liveUrl: "https://pro-kanban-iota.vercel.app",
     githubUrl: "https://github.com/DEVELOPERBibek10/Pro-Kanban",
@@ -37,7 +37,7 @@ export const ProjectCardInfo = [
     image: "/klimate.png",
     title: "Klimate",
     description:
-      "A comprehensive analytics platform built for modern businesses. Track metrics, visualize data trends, and make data-driven decisions with real-time insights.",
+      "Weather forecast application using shadcn/ui and React Query, featuring city search with suggestions and a persistent favorites system for personalized user experience.",
     techStack: [
       "React JS",
       "TypeScript",

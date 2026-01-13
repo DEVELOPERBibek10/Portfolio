@@ -29,7 +29,7 @@ export const LinkContainerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.2,
+      delayChildren: 0.25,
     },
   },
 };

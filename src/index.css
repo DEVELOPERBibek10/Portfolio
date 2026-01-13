@@ -141,5 +141,5 @@
 }
 
 section[id] {
-  scroll-margin-top: 5rem; /* Adjust based on your Navbar height */
+  scroll-margin-top: 4.7rem; /* Adjust based on your Navbar height */
 }

@@ -90,12 +90,14 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-muted-foreground leading-relaxed"
             >
-              Lorem ipsum dolor sit amet consectetur adipiscing elit. Slit, illo
-              quis reprehenderit et laboriosam, rem, dolore eum quod voluptate
-              exercitationem nostis, nihil esse debitis maxime facere minus sint
-              delectus vult in eos quo officia explicabo dolenti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupt quibem, sed
-              leeste eso misgraeort! Nulla, niquod a quel
+              I am a Frontend Developer specializing in the MERN stack, with a
+              focus on building robust, logic-driven user experiences. While my
+              core expertise lies in crafting performant React interfaces, I
+              bring a strong understanding of backend fundamentals—specifically
+              in secure authentication systems and API architecture. My goal is
+              to bridge the gap between design and infrastructure, ensuring that
+              every application I build is as secure and resilient as it is
+              visually engaging.
             </motion.p>
             <div className="flex flex-col justify-center gap-3 mt-6">
               <div>

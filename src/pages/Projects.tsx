@@ -28,7 +28,7 @@ const Projects = () => {
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
   return (
     <>
-      <section id="projects" className=" px-6 my-24 ">
+      <section id="projects" className=" px-6 my-24 py-6 ">
         <div className="container mx-auto">
           <motion.div
             initial="hidden"
@@ -92,7 +92,7 @@ const Projects = () => {
                   <SwiperSlide>
                     <motion.article
                       variants={LinkItemVariants}
-                      transition={{ duration: 0.5 }}
+                      transition={{ duration: 0.4 }}
                     >
                       <ProjectCard
                         image={image}
