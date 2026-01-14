@@ -1,8 +1,8 @@
 import { navLinks } from "../../constants/navLinks";
 
 import { motion } from "motion/react";
-import { Button } from "../ui/button";
-import { CircleArrowUp, Code2, Moon } from "lucide-react";
+
+import { CircleArrowUp, Code2 } from "lucide-react";
 import {
   fadeBottom,
   fadeInLeft,
@@ -64,9 +64,6 @@ const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
         transition={{ duration: 0.6 }}
         className="flex  gap-4 md:gap-3 items-center justify-end mx-6 md:mx-20"
       >
-        <Button variant={"ghost"} size={"icon"} className="cursor-pointer">
-          <Moon className="size-3/4 md:size-1/2" />
-        </Button>
         <a
           href="#contact"
           className={

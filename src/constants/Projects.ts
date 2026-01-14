@@ -3,7 +3,7 @@ export const ProjectCardInfo = [
     image: "/social-media.png",
     title: "Nepabook",
     description:
-      "A comprehensive analytics platform built for modern businesses. Track metrics, visualize data trends, and make data-driven decisions with real-time insights.",
+      "Full-stack social media app with React, Redux Toolkit, React Query, and Appwrite. Implemented authentication, data management, and infinite-scroll content delivery.",
     techStack: ["React JS", "TypeScript", "Appwrite", "Shadcn UI"],
     liveUrl: "https://social-media-zsr5.vercel.app",
     githubUrl: "https://github.com/DEVELOPERBibek10/Social-Media",
