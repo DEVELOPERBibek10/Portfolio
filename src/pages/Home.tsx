@@ -23,7 +23,7 @@ const Home = () => {
           >
             <div className="w-52 h-52 mb-4 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-gray-400 shadow-[0_4px_30px_rgba(0,0,0,0.06)]">
               <img
-                src={"/profile.jpeg"}
+                src={"/profile.png"}
                 alt="Bibek Pyakurel"
                 loading="lazy"
                 className="w-full h-full object-cover"
