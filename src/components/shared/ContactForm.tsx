@@ -69,7 +69,11 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel>Name</FormLabel>
                 <FormControl>
-                  <Input disabled={loading} className="w-180" {...field} />
+                  <Input
+                    disabled={loading}
+                    className="w-90 md:w-180"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -85,7 +89,7 @@ const ContactForm = () => {
                   <Input
                     disabled={loading}
                     type="email"
-                    className="w-180"
+                    className="w-90 md:w-180"
                     {...field}
                   />
                 </FormControl>
@@ -102,7 +106,7 @@ const ContactForm = () => {
                 <FormControl>
                   <Textarea
                     disabled={loading}
-                    className="w-180 h-40"
+                    className="w-90 h-20 md:w-180 md:h-40"
                     {...field}
                   />
                 </FormControl>
@@ -112,7 +116,7 @@ const ContactForm = () => {
           />
           <Button
             disabled={loading}
-            className="w-180 cursor-pointer"
+            className="w-90 md:w-180 cursor-pointer"
             type="submit"
           >
             Submit

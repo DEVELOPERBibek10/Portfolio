@@ -20,6 +20,7 @@ import ProjectCard from "@/components/shared/ProjectCard";
 import {
   fadeInLeft,
   fadeInRight,
+  fadeInUp,
   LinkContainerVariants,
   LinkItemVariants,
 } from "@/constants/motionVarients";
@@ -48,7 +49,7 @@ const Projects = () => {
             initial="hidden"
             whileInView="visible"
             variants={LinkContainerVariants}
-            className="project-swiper flex justify-between items-center mx-auto  max-w-[82%] mt-5"
+            className="project-swiper hidden md:flex justify-between items-center mx-auto  max-w-[82%] mt-5"
           >
             <motion.div
               initial="hidden"
@@ -65,6 +66,7 @@ const Projects = () => {
                 <ChevronLeft className="size-3/4" />
               </Button>
             </motion.div>
+
             <Swiper
               cssMode={true}
               navigation={true}
@@ -111,6 +113,7 @@ const Projects = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: false, amount: 0.8 }}
               variants={fadeInRight}
               transition={{ delay: 0.3, duration: 0.4 }}
             >
@@ -124,6 +127,38 @@ const Projects = () => {
               </Button>
             </motion.div>
           </motion.div>
+          <div className="flex md:hidden flex-col items-center justify-center w-full">
+            {ProjectCardInfo.map(
+              ({
+                title,
+                image,
+                techStack,
+                description,
+                githubUrl,
+                liveUrl,
+              }) => (
+                <motion.article
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: false, amount: 0.3 }}
+                  variants={fadeInUp}
+                  transition={{ duration: 0.3 }}
+                  className="w-full"
+                  key={title}
+                >
+                  <ProjectCard
+                    image={image}
+                    key={title}
+                    title={title}
+                    description={description}
+                    techStack={techStack}
+                    githubUrl={githubUrl}
+                    liveUrl={liveUrl}
+                  />
+                </motion.article>
+              )
+            )}
+          </div>
         </div>
       </section>
     </>

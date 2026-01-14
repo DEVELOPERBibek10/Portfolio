@@ -13,7 +13,7 @@ import { SiAppwrite, SiPostman } from "react-icons/si";
 const About = () => {
   return (
     <>
-      <section id="about" className="px-20 pt-6 md:mt-12">
+      <section id="about" className="px-5 md:px-20 pt-6 md:mt-12">
         <div className="container mx-auto">
           <motion.div
             initial="hidden"
@@ -35,19 +35,19 @@ const About = () => {
             viewport={{ once: false, amount: 0.3 }}
             variants={fadeInLeft}
             transition={{ duration: 0.6 }}
-            className="w-full lg:w-100 pb-3"
+            className="w-full lg:w-100 md:pb-3"
           >
-            <div className="rounded-2xl overflow-hidden shadow-[0px_1px_1px_rgba(0,0,0,0.05),0px_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0px_2px_3px_rgba(0,0,0,0.04)]">
+            <div className="rounded-2xl h-60 md:h-full object-top md:object-center overflow-hidden shadow-[0px_1px_1px_rgba(0,0,0,0.05),0px_4px_6px_rgba(34,42,53,0.04),0_24px_68px_rgba(47,48,55,0.05),0px_2px_3px_rgba(0,0,0,0.04)]">
               <img
                 src={"/profile.jpeg"}
                 alt="About John Doe"
-                className="w-full h-100 object-cover object-center"
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </motion.div>
 
           {/* About Content */}
-          <div className="w-full lg:w-2/3 mb-6">
+          <div className="w-full lg:w-2/3 my-6">
             {/* Info Cards */}
             <motion.div
               initial="hidden"
@@ -88,7 +88,7 @@ const About = () => {
               viewport={{ once: false, amount: 0.3 }}
               variants={fadeInUp}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-muted-foreground leading-relaxed"
+              className="text-muted-foreground text-sm w-full md:text-base leading-relaxed"
             >
               I am a Frontend Developer specializing in the MERN stack, with a
               focus on building robust, logic-driven user experiences. While my

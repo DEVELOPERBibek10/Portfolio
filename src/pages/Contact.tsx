@@ -25,7 +25,7 @@ const Contact = () => {
             initial={"hidden"}
             whileInView={"visible"}
             variants={fadeInUpLarge}
-            transition={{ duration: 0.55, delay: 0.16 }}
+            transition={{ duration: 0.5, delay: 0.16 }}
           >
             <ContactForm />
           </motion.div>

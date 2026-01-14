@@ -8,6 +8,7 @@ import {
   fadeInLeft,
   fadeInRight,
 } from "@/constants/motionVarients";
+import { MobileNav } from "./MobileNav";
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -36,7 +37,7 @@ const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
       </motion.a>
 
       <motion.ul
-        className={`w-fit ${
+        className={`w-fit hidden md:flex ${
           !isScrolled &&
           "bg-white/10 backdrop-blur-lg border-b h-14 px-6 mt-3 rounded-full border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.07)]"
         } flex ml-32 items-center justify-center gap-4`}
@@ -55,27 +56,27 @@ const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
           </li>
         ))}
       </motion.ul>
-
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInRight}
         transition={{ duration: 0.6 }}
-        className="flex gap-3 items-center justify-end mx-20"
+        className="flex  gap-4 md:gap-3 items-center justify-end mx-6 md:mx-20"
       >
         <Button variant={"ghost"} size={"icon"} className="cursor-pointer">
-          <Moon size={18} />
+          <Moon className="size-3/4 md:size-1/2" />
         </Button>
         <a
           href="#contact"
           className={
-            "rounded-full border text-sm border-gray-800 p-2 flex items-center gap-2"
+            "rounded-full hidden border text-sm border-gray-800 p-2 md:flex items-center gap-2"
           }
         >
           Contact me
           <CircleArrowUp size={18} />
         </a>
+        <MobileNav activeId={activeId} />
       </motion.div>
     </nav>
   );

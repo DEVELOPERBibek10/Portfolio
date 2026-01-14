@@ -38,7 +38,7 @@ const ProjectCard = ({
   className,
 }: ProjectCardProps) => {
   return (
-    <motion.div className="h-full pb-16">
+    <motion.div className="h-full pb-6 md:pb-16">
       <Card
         className={cn(
           "group overflow-hidden transition-all duration-500 h-120 hover:asthetic-shadow hover:-translate-y-1",
@@ -55,8 +55,8 @@ const ProjectCard = ({
         </div>
 
         <CardHeader>
-          <CardTitle className="text-xl tracking-tight">{title}</CardTitle>
-          <CardDescription className="leading-relaxed line-clamp-4">
+          <CardTitle className="md:text-xl tracking-tight">{title}</CardTitle>
+          <CardDescription className="leading-relaxed line-clamp-4 text-sm">
             {description}
           </CardDescription>
         </CardHeader>
