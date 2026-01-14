@@ -30,7 +30,7 @@ const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
         viewport={{ once: true, amount: 0.3 }}
         variants={fadeInLeft}
         transition={{ duration: 0.6 }}
-        className="mx-10 flex items-center gap-1"
+        className="mx-5 md:mx-10 flex items-center gap-1"
       >
         <span className="text-2xl font-bold">Bibek</span>
         <Code2 size={30} color="red" />
