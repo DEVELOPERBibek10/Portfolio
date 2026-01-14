@@ -32,7 +32,7 @@ const Navbar = ({ isScrolled, activeId }: NavbarProps) => {
         transition={{ duration: 0.6 }}
         className="mx-10 flex items-center gap-1"
       >
-        <span className="text-2xl font-black">Bibek</span>
+        <span className="text-2xl font-bold">Bibek</span>
         <Code2 size={30} color="red" />
       </motion.a>
 
