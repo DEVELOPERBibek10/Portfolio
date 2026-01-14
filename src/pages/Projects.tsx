@@ -142,7 +142,7 @@ const Projects = () => {
                   whileInView="visible"
                   viewport={{ once: false, amount: 0.3 }}
                   variants={fadeInUp}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.35, delay: 0.2 }}
                   className="w-full"
                   key={title}
                 >
